@@ -10,6 +10,8 @@
 
 @interface ViewController : UIViewController
 @property (strong, nonatomic) IBOutlet UILabel *PredictionLabel;
+@property (strong, nonatomic) NSArray *predictions;
+
 - (IBAction)buttonPressed;
 
 @end

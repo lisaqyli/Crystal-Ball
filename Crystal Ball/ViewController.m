@@ -18,7 +18,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.PredictionLabel.frame = CGRectMake(100, 200, 100, 100);
+    //self is the viewcontroller
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    CGRect frame = self.PredictionLabel.frame;
+    self.PredictionLabel.frame = CGRectMake(frame.origin.x, 200, frame.size.width, frame.size.height);
 }
 
 - (void)didReceiveMemoryWarning
